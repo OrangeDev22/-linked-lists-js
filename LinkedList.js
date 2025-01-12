@@ -29,6 +29,19 @@ class LinkedList {
         }
         return result;
     }
+
+    search(target) {
+        let current = this.head
+        while (current) {
+            if (current.data === target) {
+                return current;
+            }
+            current = current.next;
+        }
+
+        return null;
+    } 
+
     remove(value) {
         if (!this.head) return false;
 
